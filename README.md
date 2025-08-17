@@ -1,5 +1,5 @@
-# 「8月10日」最高速度22.6M/S，Shadowrocket/SSR/V2ray/Clash/Surfboard免费节点订阅链接  更新时间 2025-08-10 07:12:40
-所有免费clash节点都爬取自网络，请勿用于非法用途 。节点地址：<a href="https://cn-freevpn.github.io.io" target="_blank">点击跳转</a>
+# 「8月16日」最高速度21.8M/S，Shadowrocket/SSR/Clash/V2ray/CN-FreeVPN免费节点订阅链接  更新时间 2025-08-16 09:41:03
+所有免费clash节点都爬取自网络，请勿用于非法用途 。节点地址：<a href="https://cn-freevpn.github.io" target="_blank">点击跳转</a>
 
 ## clash使用教程：
 
@@ -9,23 +9,23 @@
 
 ### Clash订阅链接
 
-- https://cn-freevpn.github.io.io/uploads/2025/08/0-20250810.yaml
-- https://cn-freevpn.github.io.io/uploads/2025/08/1-20250810.yaml
-- https://cn-freevpn.github.io.io/uploads/2025/08/2-20250810.yaml
-- https://cn-freevpn.github.io.io/uploads/2025/08/3-20250810.yaml
-- https://cn-freevpn.github.io.io/uploads/2025/08/4-20250810.yaml
+- https://cn-freevpn.github.io/uploads/2025/08/0-20250816.yaml
+- https://cn-freevpn.github.io/uploads/2025/08/1-20250816.yaml
+- https://cn-freevpn.github.io/uploads/2025/08/2-20250816.yaml
+- https://cn-freevpn.github.io/uploads/2025/08/3-20250816.yaml
+- https://cn-freevpn.github.io/uploads/2025/08/4-20250816.yaml
 
 ### V2ray订阅链接
 
-- https://cn-freevpn.github.io.io/uploads/2025/08/0-20250810.txt
-- https://cn-freevpn.github.io.io/uploads/2025/08/1-20250810.txt
-- https://cn-freevpn.github.io.io/uploads/2025/08/2-20250810.txt
-- https://cn-freevpn.github.io.io/uploads/2025/08/3-20250810.txt
-- https://cn-freevpn.github.io.io/uploads/2025/08/4-20250810.txt
+- https://cn-freevpn.github.io/uploads/2025/08/0-20250816.txt
+- https://cn-freevpn.github.io/uploads/2025/08/1-20250816.txt
+- https://cn-freevpn.github.io/uploads/2025/08/2-20250816.txt
+- https://cn-freevpn.github.io/uploads/2025/08/3-20250816.txt
+- https://cn-freevpn.github.io/uploads/2025/08/4-20250816.txt
 
 ### Sing-box订阅链接
 
-- https://cn-freevpn.github.io.io/uploads/2025/08/20250810.json
+- https://cn-freevpn.github.io/uploads/2025/08/20250816.json
 
 ## 更多clash节点订阅 ：
 
@@ -58,7 +58,7 @@
 
 | 工具         | Windows                                                      | MacOS                                                        | Android                                                      | IOS                                                          | 备注                                                |
 | ------------ | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ | :-------------------------------------------------- |
-| Shadowsocks  | [shadowsocks-win](https://github.com/shadowsocks/shadowsocks-windows/releases) <br/>[shadowsocks-qt5](https://github.com/shadowsocks/shadowsocks-qt5/releases) <br/> [SSD](https://github.com/TheCGDF/SSD-Windows/releases) | [ShadowsocksX-NG](https://github.com/shadowsocks/ShadowsocksX-NG/releases) <br/> [Surge](https://nssurge.com/) | [Google Play](https://play.google.com/store/apps/details?id=com.github.shadowsocks) <br/>[Github](https://github.com/shadowsocks/shadowsocks-android/releases) <br/>[SSD](https://github.com/TheCGDF/SSD-Android/releases) <br/>[Surfboard](https://manual.getsurfboard.com/) | **[Shadowrocket](https://apps.apple.com/us/app/id932747118)** <br/>**[Surge4](https://apps.apple.com/us/app/id1442620678)**  <br/>[ShadowSocks](http://apt.thebigboss.org/onepackage.php?bundleid=com.linusyang.shadowsocks) <br/>**[QuantumultX](https://apps.apple.com/us/app/id1443988620)** | IOS工具下载需要用美区的AppleID                      |
+| Shadowsocks  | [shadowsocks-win](https://github.com/shadowsocks/shadowsocks-windows/releases) <br/>[shadowsocks-qt5](https://github.com/shadowsocks/shadowsocks-qt5/releases) <br/> [SSD](https://github.com/TheCGDF/SSD-Windows/releases) | [ShadowsocksX-NG](https://github.com/shadowsocks/ShadowsocksX-NG/releases) <br/> [Surge](https://nssurge.com/) | [Google Play](https://play.google.com/store/apps/details?id=com.github.shadowsocks) <br/>[Github](https://github.com/shadowsocks/shadowsocks-android/releases) <br/>[SSD](https://github.com/TheCGDF/SSD-Android/releases) <br/>[CN-FreeVPN](https://manual.getsurfboard.com/) | **[Shadowrocket](https://apps.apple.com/us/app/id932747118)** <br/>**[Surge4](https://apps.apple.com/us/app/id1442620678)**  <br/>[ShadowSocks](http://apt.thebigboss.org/onepackage.php?bundleid=com.linusyang.shadowsocks) <br/>**[QuantumultX](https://apps.apple.com/us/app/id1443988620)** | IOS工具下载需要用美区的AppleID                      |
 | ShadowsocksR | [SSR](https://github.com/shadowsocksrr/shadowsocksr-csharp/releases)  <br/>**[HMBSbige/SSR](https://github.com/HMBSbige/ShadowsocksR-Windows/releases)** |                                                              | **[SSRR](https://github.com/shadowsocksrr/shadowsocksr-android/releases)** |                                                              |                                                     |
 | QV2ray       | **[Qv2ray](https://github.com/Qv2ray/Qv2ray/releases)**      | **[Qv2ray](https://github.com/Qv2ray/Qv2ray/releases)**      |                                                              |                                                              | [官网](https://qv2ray.net/)                         |
 | V2ray        | [V2rayN](https://github.com/2dust/v2rayN/releases)           | [V2rayU](https://github.com/yanue/V2rayU/releases) <br/>[V2rayX](https://github.com/Cenmrev/V2RayX/releases) | [V2rayNG](https://github.com/2dust/v2rayNG/releases) <br/>[Actinium](https://github.com/V2Ray-Android/Actinium/releases) <br/>[BifrostV](https://play.google.com/store/apps/details?id=com.github.dawndiy.bifrostv) | [kitsunebi](https://apps.apple.com/us/app/kitsunebi-proxy-utility/id1446584073) | [官网](https://www.v2ray.com/)                      |
