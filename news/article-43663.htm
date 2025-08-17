@@ -1,0 +1,235 @@
+<!doctype html>
+<html xml:lang="zh-CN" lang="zh-CN">
+
+<head>
+        <link rel="canonical" href="https://cn-freevpn.github.io/news/article-43663.htm" />
+    <!--====== Required meta tags ======-->
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>mysql中的日期时间类型有哪些？</title>
+        <meta name="description" content="1、DATE类型：存储年月日 2、TIME类型：存储时分秒 3、DATETIME类型：存储YYYY-MM-DD HH:MM:SS 4、TIMESTAMP类型：存储YYYYMMDDHHMMSS 使用my" />
+        <link rel="icon" href="/assets/website/img/cn-freevpn/favicon.ico" type="image/x-icon"/>
+
+    <meta name="author" content="CN-FreeVPN节点订阅中文站">
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://cn-freevpn.github.io/news/article-43663.htm" />
+    <meta property="og:site_name" content="CN-FreeVPN节点订阅中文站" />
+    <meta property="og:title" content="mysql中的日期时间类型有哪些？" />
+    <meta property="og:image" content="https://cn-freevpn.github.io/uploads/20240709-1/429658daad74043447777814a12b8f89.webp" />
+        <meta property="og:release_date" content="2025-01-20T07:13:01" />
+    <meta property="og:updated_time" content="2025-01-20T07:13:01" />
+        <meta property="og:description" content="1、DATE类型：存储年月日 2、TIME类型：存储时分秒 3、DATETIME类型：存储YYYY-MM-DD HH:MM:SS 4、TIMESTAMP类型：存储YYYYMMDDHHMMSS 使用my" />
+        
+    <meta name="applicable-device" content="pc,mobile" />
+    <meta name="renderer" content="webkit" />
+    <meta name="force-rendering" content="webkit" />
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta name="robots" content="max-image-preview:large" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="mysql中的日期时间类型有哪些？">
+    <meta name="format-detection" content="telephone=no">
+
+    <link rel="dns-prefetch" href="https:/www.googletagmanager.com">
+    <link rel="dns-prefetch" href="https://www.googleadservices.com">
+    <link rel="dns-prefetch" href="https://www.google-analytics.com">
+    <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com">
+    <link rel="dns-prefetch" href="https://cm.g.doubleclick.net">
+    
+    <!--====== Bootstrap css ======-->
+    <link rel="stylesheet" href="/assets/website/css/cn-freevpn/bootstrap.min.css">
+    <!--====== Slick css ======-->
+    <link rel="stylesheet" href="/assets/website/css/cn-freevpn/slick.css">
+    <!--====== Magnific Popup css ======-->
+    <link rel="stylesheet" href="/assets/website/css/cn-freevpn/magnific-popup.css">
+    <!--====== Line Icons css ======-->
+    <link rel="stylesheet" href="/assets/website/css/cn-freevpn/LineIcons.css">
+    <!--====== Default css ======-->
+    <link rel="stylesheet" href="/assets/website/css/cn-freevpn/default.css">
+    <!--====== Style css ======-->
+    <link rel="stylesheet" href="/assets/website/css/cn-freevpn/style.css">
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-9WYCQ3NMFG"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-4YFZCSBJW0');
+</script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9847848176924679"
+     crossorigin="anonymous"></script>
+</head>
+
+<body data-page="detail">
+    <!--====== HEADER ONE PART START ======-->
+    <header class="header-area">
+        <div class="navbar-area navbar-one navbar-transparent">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <nav class="navbar navbar-expand-lg">
+                    <a class="navbar-brand" href="/">
+                                        <span>
+                        CN-FreeVPN Node                    </span>
+                                        </a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarOne" aria-controls="navbarOne" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="toggler-icon"></span>
+                        <span class="toggler-icon"></span>
+                        <span class="toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse sub-menu-bar" id="navbarOne">
+                        <ul class="navbar-nav m-auto">
+                                                        <li class="nav-item">
+                                <a href="/">首页</a>
+                            </li>
+                                                        <li class="nav-item">
+                                <a href="/free-nodes/">免费节点</a>
+                            </li>
+                                                        <li class="nav-item">
+                                <a href="/paid-subscribe/">推荐机场</a>
+                            </li>
+                                                        <li class="nav-item">
+                                <a href="/client.htm">客户端</a>
+                            </li>
+                                                        <li class="nav-item">
+                                <a href="/news/">新闻资讯</a>
+                            </li>
+                                                    </ul>
+                    </div>
+                </nav> <!-- navbar -->
+            </div>
+        </div> <!-- row -->
+    </div> <!-- container -->
+</div>
+        <div id="home" class="header-content-area d-flex align-items-center list" style="height:450px;">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="header-wrapper">
+                            <div class="header-content">
+                                <h1 class="header-title">mysql中的日期时间类型有哪些？</h1>
+                                <p class="text nav">
+                                    <a href="/">首页</a> / <a href="/news/">新闻资讯</a> / <span>正文</span>
+                                </p>
+                            </div> <!-- header content -->
+                            <div class="header-image d-none d-lg-block">
+                                <div class="image">
+                                    <img src="/assets/website/img/cn-freevpn/header.png" alt="Header">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div> <!-- row -->
+            </div> <!-- container -->
+            <div class="header-shape">
+                <img src="/assets/website/img/cn-freevpn/header-shape.svg" alt="shape">
+            </div> <!-- header-shape -->
+        </div> <!-- header content area -->
+    </header>
+    <!--====== HEADER ONE PART ENDS ======-->
+    <!--====== ABOUT THREE PART START ======-->
+    <section id="about" class="about-area pt-70 pb-100">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-9">
+                                    <input type="hidden" id="share-website-info" data-name="" data-url="">
+                  				  				  				<div id="content_views" class="markdown_views prism-atom-one-dark"> <p>1、DATE类型：存储年月日</p> <p>2、TIME类型：存储时分秒</p> <p>3、DATETIME类型：存储YYYY-MM-DD HH:MM:SS</p> <p>4、TIMESTAMP类型：存储YYYYMMDDHHMMSS</p> <p>使用mysql数据库，常用的类型就是date和datetime</p> <p>5、datetime和timestamp有什么区别？<br /> 5.1、相同点：<br /> 都可以用来存储：年月日时分秒<br /> 两者都可以精确到毫秒，比如：datetime(3)、timestamp(3)，就是精确到三位毫秒值</p> <p>5.2、不同点：<br /> timestamp更适合跨时区的业务<br /> （mysql5.6.4之后的版本，可以精确到毫秒，并且可以指定）</p> </div> 			                <div class="clearfix"></div>
+                <div class="col-md-12 mt-5">
+                                        <p>上一个：<a href="/news/article-43166.htm">瑞鹏宠物医院是公立还是私立（瑞鹏宠物医院属于什么企业）</a></p>
+                                        <p>下一个：<a href="/news/article-43664.htm">动物诊疗许可证申请书（动物诊疗许可证申领准备材料）</a></p>
+                                    </div>
+                                </div>
+                <div class="col-md-3">
+                    <div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">热门文章</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2"><a href="/news/article-51711.htm" title="宠物粮的利润有多大 宠物粮的利润有多大了">宠物粮的利润有多大 宠物粮的利润有多大了</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-1-7-clash-node.htm" title="「1月7日」最高速度21.3M/S，V2ray/SSR/Shadowrocket/Clash/CN-FreeVPN免费节点订阅链接">「1月7日」最高速度21.3M/S，V2ray/SSR/Shadowrocket/Clash/CN-FreeVPN免费节点订阅链接</a></li>
+                        <li class="py-2"><a href="/news/article-50144.htm" title="宠物粮食专卖店名称有哪些 宠物粮食专卖店名称有哪些呢">宠物粮食专卖店名称有哪些 宠物粮食专卖店名称有哪些呢</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-1-19-share-surfboard-node.htm" title="「1月19日」最高速度18.1M/S，V2ray/SSR/Shadowrocket/Clash/CN-FreeVPN免费节点订阅链接">「1月19日」最高速度18.1M/S，V2ray/SSR/Shadowrocket/Clash/CN-FreeVPN免费节点订阅链接</a></li>
+                        <li class="py-2"><a href="/news/article-57754.htm" title="南京狗狗领养基地在哪里（南京 狗 领养）">南京狗狗领养基地在哪里（南京 狗 领养）</a></li>
+                        <li class="py-2"><a href="/news/article-43164.htm" title="宠爱国际动物医疗机构（宠爱国际宠物医院官网）">宠爱国际动物医疗机构（宠爱国际宠物医院官网）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-1-14-free-surfboard.htm" title="「1月14日」最高速度19.8M/S，V2ray/Shadowrocket/SSR/Clash/CN-FreeVPN免费节点订阅链接">「1月14日」最高速度19.8M/S，V2ray/Shadowrocket/SSR/Clash/CN-FreeVPN免费节点订阅链接</a></li>
+                        <li class="py-2"><a href="/news/article-60038.htm" title="猫瘟打针（猫瘟打针几天可以停）">猫瘟打针（猫瘟打针几天可以停）</a></li>
+                        <li class="py-2"><a href="/news/article-46653.htm" title="动物医院牌子设计（动物医院牌匾设计）">动物医院牌子设计（动物医院牌匾设计）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-2-20-clash-node-daily-updates.htm" title="「2月20日」最高速度22.5M/S，SSR/Shadowrocket/Clash/V2ray/CN-FreeVPN免费节点订阅链接">「2月20日」最高速度22.5M/S，SSR/Shadowrocket/Clash/V2ray/CN-FreeVPN免费节点订阅链接</a></li>
+                    </ul>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">归纳</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">12</span> <a href="/date/2025-03/" title="2025-03 归档">2025-03</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">83</span> <a href="/date/2025-02/" title="2025-02 归档">2025-02</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">84</span> <a href="/date/2025-01/" title="2025-01 归档">2025-01</a></h4>
+            </li>
+                    </ul>
+    </div>
+</div>
+
+                </div>
+            </div>
+        </div> <!-- container -->
+    </section>
+    <!--====== ABOUT THREE PART ENDS ======-->
+        <!--====== FOOTER PART START ======-->
+    <footer id="footer" class="footer-area">
+        <div class="footer-copyright">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="copyright text-center">
+                            <p>
+                                <a href="/">首页</a> | 
+                                <a href="/free-node/">免费节点</a> | 
+                                <a href="/news/">新闻资讯</a> |
+                                <a href="/about-us.htm">关于我们</a> |
+                                <a href="/disclaimer.htm">免责申明</a> |
+                                <a href="/privacy.htm">隐私申明</a> |
+                                <a href="/sitemap.xml">网站地图</a>
+                            </p>
+                            <p class="text">CN-FreeVPN节点订阅中文站 版权所有 Powered by WordPress</p>
+                        </div> <!-- copyright -->
+                    </div>
+                </div> <!-- row -->
+            </div> <!-- container -->
+        </div> <!-- footer copyright -->
+    </footer>
+    <!--====== FOOTER PART ENDS ======-->
+    <!--====== BACK TOP TOP PART START ======-->
+    <a href="#" class="back-to-top"><i class="lni-chevron-up"></i></a>
+    <!--====== BACK TOP TOP PART ENDS ======-->
+    <!--====== jquery js ======-->
+    <script src="/assets/website/js/frontend/cn-freevpn/vendor/modernizr-3.6.0.min.js"></script>
+    <script src="/assets/website/js/frontend/cn-freevpn/vendor/jquery-1.12.4.min.js"></script>
+    <!--====== Bootstrap js ======-->
+    <script src="/assets/website/js/frontend/cn-freevpn/bootstrap.min.js"></script>
+    <script src="/assets/website/js/frontend/cn-freevpn/popper.min.js"></script>
+    <!--====== Images Loaded js ======-->
+    <script src="/assets/website/js/frontend/cn-freevpn/imagesloaded.pkgd.min.js"></script>
+    <!--====== Scrolling Nav js ======-->
+    <script src="/assets/website/js/frontend/cn-freevpn/jquery.easing.min.js"></script>
+    <script src="/assets/website/js/frontend/cn-freevpn/scrolling-nav.js"></script>
+    <!--====== Slick js ======-->
+    <script src="/assets/website/js/frontend/cn-freevpn/slick.min.js"></script>
+    <!--====== Main js ======-->
+    <script src="/assets/website/js/frontend/cn-freevpn/main.js"></script>
+    <script src="https://www.freeclashnode.com/assets/js/frontend/invite-url.js"></script>
+    <script src="/assets/website/js/frontend/G.js"></script>
+</body>
+
+</html>

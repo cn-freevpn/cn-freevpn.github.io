@@ -1,0 +1,238 @@
+<!doctype html>
+<html xml:lang="zh-CN" lang="zh-CN">
+
+<head>
+        <link rel="canonical" href="https://cn-freevpn.github.io/news/article-23546.htm" />
+    <!--====== Required meta tags ======-->
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>C ++程序使用Sundaram筛子在给定范围之间生成素数</title>
+        <meta name="description" content="这是C ++程序，用于实现Sundaram筛，以在给定范围之间生成素数。该算法由Sundaram于1934年发现。 算法 Begin &nbsp;&nbsp;&nbsp;printPrimes(n) " />
+        <link rel="icon" href="/assets/website/img/cn-freevpn/favicon.ico" type="image/x-icon"/>
+
+    <meta name="author" content="CN-FreeVPN节点订阅中文站">
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://cn-freevpn.github.io/news/article-23546.htm" />
+    <meta property="og:site_name" content="CN-FreeVPN节点订阅中文站" />
+    <meta property="og:title" content="C ++程序使用Sundaram筛子在给定范围之间生成素数" />
+    <meta property="og:image" content="https://cn-freevpn.github.io/uploads/20240709-1/94bf0254d077d3abc184d8498a37adb1.webp" />
+        <meta property="og:release_date" content="2024-12-09T10:28:00" />
+    <meta property="og:updated_time" content="2024-12-09T10:28:00" />
+        <meta property="og:description" content="这是C ++程序，用于实现Sundaram筛，以在给定范围之间生成素数。该算法由Sundaram于1934年发现。 算法 Begin &nbsp;&nbsp;&nbsp;printPrimes(n) " />
+        
+    <meta name="applicable-device" content="pc,mobile" />
+    <meta name="renderer" content="webkit" />
+    <meta name="force-rendering" content="webkit" />
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta name="robots" content="max-image-preview:large" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="C ++程序使用Sundaram筛子在给定范围之间生成素数">
+    <meta name="format-detection" content="telephone=no">
+
+    <link rel="dns-prefetch" href="https:/www.googletagmanager.com">
+    <link rel="dns-prefetch" href="https://www.googleadservices.com">
+    <link rel="dns-prefetch" href="https://www.google-analytics.com">
+    <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com">
+    <link rel="dns-prefetch" href="https://cm.g.doubleclick.net">
+    
+    <!--====== Bootstrap css ======-->
+    <link rel="stylesheet" href="/assets/website/css/cn-freevpn/bootstrap.min.css">
+    <!--====== Slick css ======-->
+    <link rel="stylesheet" href="/assets/website/css/cn-freevpn/slick.css">
+    <!--====== Magnific Popup css ======-->
+    <link rel="stylesheet" href="/assets/website/css/cn-freevpn/magnific-popup.css">
+    <!--====== Line Icons css ======-->
+    <link rel="stylesheet" href="/assets/website/css/cn-freevpn/LineIcons.css">
+    <!--====== Default css ======-->
+    <link rel="stylesheet" href="/assets/website/css/cn-freevpn/default.css">
+    <!--====== Style css ======-->
+    <link rel="stylesheet" href="/assets/website/css/cn-freevpn/style.css">
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-9WYCQ3NMFG"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-4YFZCSBJW0');
+</script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9847848176924679"
+     crossorigin="anonymous"></script>
+</head>
+
+<body data-page="detail">
+    <!--====== HEADER ONE PART START ======-->
+    <header class="header-area">
+        <div class="navbar-area navbar-one navbar-transparent">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <nav class="navbar navbar-expand-lg">
+                    <a class="navbar-brand" href="/">
+                                        <span>
+                        CN-FreeVPN Node                    </span>
+                                        </a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarOne" aria-controls="navbarOne" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="toggler-icon"></span>
+                        <span class="toggler-icon"></span>
+                        <span class="toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse sub-menu-bar" id="navbarOne">
+                        <ul class="navbar-nav m-auto">
+                                                        <li class="nav-item">
+                                <a href="/">首页</a>
+                            </li>
+                                                        <li class="nav-item">
+                                <a href="/free-nodes/">免费节点</a>
+                            </li>
+                                                        <li class="nav-item">
+                                <a href="/paid-subscribe/">推荐机场</a>
+                            </li>
+                                                        <li class="nav-item">
+                                <a href="/client.htm">客户端</a>
+                            </li>
+                                                        <li class="nav-item">
+                                <a href="/news/">新闻资讯</a>
+                            </li>
+                                                    </ul>
+                    </div>
+                </nav> <!-- navbar -->
+            </div>
+        </div> <!-- row -->
+    </div> <!-- container -->
+</div>
+        <div id="home" class="header-content-area d-flex align-items-center list" style="height:450px;">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="header-wrapper">
+                            <div class="header-content">
+                                <h1 class="header-title">C ++程序使用Sundaram筛子在给定范围之间生成素数</h1>
+                                <p class="text nav">
+                                    <a href="/">首页</a> / <a href="/news/">新闻资讯</a> / <span>正文</span>
+                                </p>
+                            </div> <!-- header content -->
+                            <div class="header-image d-none d-lg-block">
+                                <div class="image">
+                                    <img src="/assets/website/img/cn-freevpn/header.png" alt="Header">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div> <!-- row -->
+            </div> <!-- container -->
+            <div class="header-shape">
+                <img src="/assets/website/img/cn-freevpn/header-shape.svg" alt="shape">
+            </div> <!-- header-shape -->
+        </div> <!-- header content area -->
+    </header>
+    <!--====== HEADER ONE PART ENDS ======-->
+    <!--====== ABOUT THREE PART START ======-->
+    <section id="about" class="about-area pt-70 pb-100">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-9">
+                                    <input type="hidden" id="share-website-info" data-name="" data-url="">
+                  				  				  				<p>这是C ++程序，用于实现Sundaram筛，以在给定范围之间生成素数。该算法由Sundaram于1934年发现。</p> <h2>算法</h2> <pre>Begin &nbsp;&nbsp;&nbsp;printPrimes(n) &nbsp;&nbsp;&nbsp;Here&nbsp;we&nbsp;find&nbsp;out&nbsp;primes &nbsp;&nbsp;&nbsp;smaller&nbsp;than&nbsp;n,&nbsp;we&nbsp;reduce&nbsp;n-2&nbsp;to&nbsp;half.&nbsp;We&nbsp;call&nbsp;it&nbsp;New. &nbsp;&nbsp;&nbsp;New&nbsp;=&nbsp;(n-2)/2; &nbsp;&nbsp;&nbsp;Create&nbsp;an&nbsp;array&nbsp;marked[n]&nbsp;that&nbsp;is&nbsp;going &nbsp;&nbsp;&nbsp;to&nbsp;be&nbsp;used&nbsp;to&nbsp;separate&nbsp;numbers&nbsp;of&nbsp;the&nbsp;form&nbsp;i+j+2ij&nbsp;from &nbsp;&nbsp;&nbsp;others&nbsp;where&nbsp;1&nbsp;&lt;=&nbsp;i&nbsp;&lt;=&nbsp;j &nbsp;&nbsp;&nbsp;Initialize&nbsp;all&nbsp;entries&nbsp;of&nbsp;marked[]&nbsp;as&nbsp;false. &nbsp;&nbsp;&nbsp;Mark&nbsp;all&nbsp;numbers&nbsp;of&nbsp;the&nbsp;form&nbsp;i&nbsp;+&nbsp;j&nbsp;+&nbsp;2ij&nbsp;as&nbsp;true &nbsp;&nbsp;&nbsp;where&nbsp;1&nbsp;&lt;=&nbsp;i&nbsp;&lt;=&nbsp;j &nbsp;&nbsp;&nbsp;for&nbsp;i=1&nbsp;to&nbsp;New &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;a)&nbsp;j&nbsp;=&nbsp;i; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;b)&nbsp;Loop&nbsp;While&nbsp;(i&nbsp;+&nbsp;j&nbsp;+&nbsp;2*i*j)&nbsp;2,&nbsp;then&nbsp;print&nbsp;2&nbsp;as&nbsp;first&nbsp;prime. &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Remaining&nbsp;primes&nbsp;are&nbsp;of&nbsp;the&nbsp;form&nbsp;2i&nbsp;+&nbsp;1&nbsp;where&nbsp;i&nbsp;is &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;index&nbsp;of&nbsp;NOT&nbsp;marked&nbsp;numbers.&nbsp;So&nbsp;print&nbsp;2i&nbsp;+&nbsp;1&nbsp;for&nbsp;all&nbsp;i &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;such&nbsp;that&nbsp;marked[i]&nbsp;is&nbsp;false. End</pre> <h2>范例程式码</h2> <pre>#include&nbsp;&lt;bits/stdc++.h&gt; using&nbsp;namespace&nbsp;std; int&nbsp;SieveOfSundaram(int&nbsp;m)&nbsp;{ &nbsp;&nbsp;&nbsp;int&nbsp;N=&nbsp;(m-2)/2; &nbsp;&nbsp;&nbsp;bool&nbsp;marked[N&nbsp;+&nbsp;1]; &nbsp;&nbsp;&nbsp;memset(marked,&nbsp;false,&nbsp;sizeof(marked)); &nbsp;&nbsp;&nbsp;for&nbsp;(int&nbsp;i=1;&nbsp;i&lt;=N;&nbsp;i++) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;for&nbsp;(int&nbsp;j=i;&nbsp;(i&nbsp;+&nbsp;j&nbsp;+&nbsp;2*i*j)&nbsp;&lt;=&nbsp;N;&nbsp;j++) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;marked[i&nbsp;+&nbsp;j&nbsp;+&nbsp;2*i*j]&nbsp;=&nbsp;true; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;(m&nbsp;&gt;&nbsp;2) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;cout&nbsp;&lt;&lt;&nbsp;2&nbsp;&lt;&lt;&nbsp;"&nbsp;"; &nbsp;&nbsp;&nbsp;for&nbsp;(int&nbsp;i=1;&nbsp;i&lt;=N;&nbsp;i++) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;(marked[i]&nbsp;==&nbsp;false) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;cout&nbsp;&lt;&lt;&nbsp;2*i&nbsp;+&nbsp;1&nbsp;&lt;&lt;&nbsp;"&nbsp;"; } int&nbsp;main(void)&nbsp;{ &nbsp;&nbsp;&nbsp;int&nbsp;m&nbsp;=&nbsp;10; &nbsp;&nbsp;&nbsp;SieveOfSundaram(m); &nbsp;&nbsp;&nbsp;return&nbsp;0; }</pre> <p>输出结果</p> <pre>2&nbsp;3&nbsp;5&nbsp;7</pre> <div></div> 			                <div class="clearfix"></div>
+                <div class="col-md-12 mt-5">
+                                        <p>上一个：<a href="/news/article-23094.htm">动物疫苗新规定最新版图片 动物疫苗新规定最新版图片大全</a></p>
+                                        <p>下一个：<a href="/news/article-23548.htm">宠物领养app设计思路（宠物领养app该如何设计）</a></p>
+                                    </div>
+                                </div>
+                <div class="col-md-3">
+                    <div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">热门文章</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2"><a href="/news/article-48112.htm" title="2020年中国动物疫苗市场分析（中国动物疫苗10强企业）">2020年中国动物疫苗市场分析（中国动物疫苗10强企业）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-12-31-node-share-links.htm" title="「12月31日」最高速度22.4M/S，2025年CN-FreeVPN每天更新免费节点订阅链接">「12月31日」最高速度22.4M/S，2025年CN-FreeVPN每天更新免费节点订阅链接</a></li>
+                        <li class="py-2"><a href="/news/article-37246.htm" title="宠物医院好评语句 宠物医院好评语句有哪些">宠物医院好评语句 宠物医院好评语句有哪些</a></li>
+                        <li class="py-2"><a href="/news/article-44674.htm" title="中国十大动物疫苗公司排名榜 中国十大动物疫苗公司排名榜单">中国十大动物疫苗公司排名榜 中国十大动物疫苗公司排名榜单</a></li>
+                        <li class="py-2"><a href="/news/article-66029.htm" title="宠物粮商标取名大全图片及名称（宠物粮品牌名称）">宠物粮商标取名大全图片及名称（宠物粮品牌名称）</a></li>
+                        <li class="py-2"><a href="/news/article-53306.htm" title="Java数据结构之单向环形链表（解决Josephu约瑟夫环问题）">Java数据结构之单向环形链表（解决Josephu约瑟夫环问题）</a></li>
+                        <li class="py-2"><a href="/news/article-49107.htm" title="深圳市领养宠物中心在哪里 深圳市领养宠物中心在哪里啊">深圳市领养宠物中心在哪里 深圳市领养宠物中心在哪里啊</a></li>
+                        <li class="py-2"><a href="/news/article-64797.htm" title="动物疫苗证明怎么开的（动物疫苗证明怎么开的啊）">动物疫苗证明怎么开的（动物疫苗证明怎么开的啊）</a></li>
+                        <li class="py-2"><a href="/news/article-38200.htm" title="猫三联一共几针多少钱每年都要打吗-宠物汇（猫三联一共几针,多少钱）">猫三联一共几针多少钱每年都要打吗-宠物汇（猫三联一共几针,多少钱）</a></li>
+                        <li class="py-2"><a href="/news/article-46653.htm" title="动物医院牌子设计（动物医院牌匾设计）">动物医院牌子设计（动物医院牌匾设计）</a></li>
+                    </ul>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">归纳</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">6</span> <a href="/date/2025-03/" title="2025-03 归档">2025-03</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">83</span> <a href="/date/2025-02/" title="2025-02 归档">2025-02</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">92</span> <a href="/date/2025-01/" title="2025-01 归档">2025-01</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">87</span> <a href="/date/2024-12/" title="2024-12 归档">2024-12</a></h4>
+            </li>
+                    </ul>
+    </div>
+</div>
+
+                </div>
+            </div>
+        </div> <!-- container -->
+    </section>
+    <!--====== ABOUT THREE PART ENDS ======-->
+        <!--====== FOOTER PART START ======-->
+    <footer id="footer" class="footer-area">
+        <div class="footer-copyright">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="copyright text-center">
+                            <p>
+                                <a href="/">首页</a> | 
+                                <a href="/free-node/">免费节点</a> | 
+                                <a href="/news/">新闻资讯</a> |
+                                <a href="/about-us.htm">关于我们</a> |
+                                <a href="/disclaimer.htm">免责申明</a> |
+                                <a href="/privacy.htm">隐私申明</a> |
+                                <a href="/sitemap.xml">网站地图</a>
+                            </p>
+                            <p class="text">CN-FreeVPN节点订阅中文站 版权所有 Powered by WordPress</p>
+                        </div> <!-- copyright -->
+                    </div>
+                </div> <!-- row -->
+            </div> <!-- container -->
+        </div> <!-- footer copyright -->
+    </footer>
+    <!--====== FOOTER PART ENDS ======-->
+    <!--====== BACK TOP TOP PART START ======-->
+    <a href="#" class="back-to-top"><i class="lni-chevron-up"></i></a>
+    <!--====== BACK TOP TOP PART ENDS ======-->
+    <!--====== jquery js ======-->
+    <script src="/assets/website/js/frontend/cn-freevpn/vendor/modernizr-3.6.0.min.js"></script>
+    <script src="/assets/website/js/frontend/cn-freevpn/vendor/jquery-1.12.4.min.js"></script>
+    <!--====== Bootstrap js ======-->
+    <script src="/assets/website/js/frontend/cn-freevpn/bootstrap.min.js"></script>
+    <script src="/assets/website/js/frontend/cn-freevpn/popper.min.js"></script>
+    <!--====== Images Loaded js ======-->
+    <script src="/assets/website/js/frontend/cn-freevpn/imagesloaded.pkgd.min.js"></script>
+    <!--====== Scrolling Nav js ======-->
+    <script src="/assets/website/js/frontend/cn-freevpn/jquery.easing.min.js"></script>
+    <script src="/assets/website/js/frontend/cn-freevpn/scrolling-nav.js"></script>
+    <!--====== Slick js ======-->
+    <script src="/assets/website/js/frontend/cn-freevpn/slick.min.js"></script>
+    <!--====== Main js ======-->
+    <script src="/assets/website/js/frontend/cn-freevpn/main.js"></script>
+    <script src="https://www.freeclashnode.com/assets/js/frontend/invite-url.js"></script>
+    <script src="/assets/website/js/frontend/G.js"></script>
+</body>
+
+</html>

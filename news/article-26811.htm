@@ -1,0 +1,238 @@
+<!doctype html>
+<html xml:lang="zh-CN" lang="zh-CN">
+
+<head>
+        <link rel="canonical" href="https://cn-freevpn.github.io/news/article-26811.htm" />
+    <!--====== Required meta tags ======-->
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>调用feign接口时，如何往header中添加参数</title>
+        <meta name="description" content="Controller接收到请求后，我们可以在service中通过feign直接调用其它服务的接口，但是，controller接收到的请求和通过feign调用其它服务，其它服务接收到的请求，是不一样的。" />
+        <link rel="icon" href="/assets/website/img/cn-freevpn/favicon.ico" type="image/x-icon"/>
+
+    <meta name="author" content="CN-FreeVPN节点订阅中文站">
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://cn-freevpn.github.io/news/article-26811.htm" />
+    <meta property="og:site_name" content="CN-FreeVPN节点订阅中文站" />
+    <meta property="og:title" content="调用feign接口时，如何往header中添加参数" />
+    <meta property="og:image" content="https://cn-freevpn.github.io/uploads/20240709-1/2bfaad964cac755492b7ea7f03576712.webp" />
+        <meta property="og:release_date" content="2024-12-16T10:12:55" />
+    <meta property="og:updated_time" content="2024-12-16T10:12:55" />
+        <meta property="og:description" content="Controller接收到请求后，我们可以在service中通过feign直接调用其它服务的接口，但是，controller接收到的请求和通过feign调用其它服务，其它服务接收到的请求，是不一样的。" />
+        
+    <meta name="applicable-device" content="pc,mobile" />
+    <meta name="renderer" content="webkit" />
+    <meta name="force-rendering" content="webkit" />
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta name="robots" content="max-image-preview:large" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="调用feign接口时，如何往header中添加参数">
+    <meta name="format-detection" content="telephone=no">
+
+    <link rel="dns-prefetch" href="https:/www.googletagmanager.com">
+    <link rel="dns-prefetch" href="https://www.googleadservices.com">
+    <link rel="dns-prefetch" href="https://www.google-analytics.com">
+    <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com">
+    <link rel="dns-prefetch" href="https://cm.g.doubleclick.net">
+    
+    <!--====== Bootstrap css ======-->
+    <link rel="stylesheet" href="/assets/website/css/cn-freevpn/bootstrap.min.css">
+    <!--====== Slick css ======-->
+    <link rel="stylesheet" href="/assets/website/css/cn-freevpn/slick.css">
+    <!--====== Magnific Popup css ======-->
+    <link rel="stylesheet" href="/assets/website/css/cn-freevpn/magnific-popup.css">
+    <!--====== Line Icons css ======-->
+    <link rel="stylesheet" href="/assets/website/css/cn-freevpn/LineIcons.css">
+    <!--====== Default css ======-->
+    <link rel="stylesheet" href="/assets/website/css/cn-freevpn/default.css">
+    <!--====== Style css ======-->
+    <link rel="stylesheet" href="/assets/website/css/cn-freevpn/style.css">
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-9WYCQ3NMFG"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-4YFZCSBJW0');
+</script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9847848176924679"
+     crossorigin="anonymous"></script>
+</head>
+
+<body data-page="detail">
+    <!--====== HEADER ONE PART START ======-->
+    <header class="header-area">
+        <div class="navbar-area navbar-one navbar-transparent">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <nav class="navbar navbar-expand-lg">
+                    <a class="navbar-brand" href="/">
+                                        <span>
+                        CN-FreeVPN Node                    </span>
+                                        </a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarOne" aria-controls="navbarOne" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="toggler-icon"></span>
+                        <span class="toggler-icon"></span>
+                        <span class="toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse sub-menu-bar" id="navbarOne">
+                        <ul class="navbar-nav m-auto">
+                                                        <li class="nav-item">
+                                <a href="/">首页</a>
+                            </li>
+                                                        <li class="nav-item">
+                                <a href="/free-nodes/">免费节点</a>
+                            </li>
+                                                        <li class="nav-item">
+                                <a href="/paid-subscribe/">推荐机场</a>
+                            </li>
+                                                        <li class="nav-item">
+                                <a href="/client.htm">客户端</a>
+                            </li>
+                                                        <li class="nav-item">
+                                <a href="/news/">新闻资讯</a>
+                            </li>
+                                                    </ul>
+                    </div>
+                </nav> <!-- navbar -->
+            </div>
+        </div> <!-- row -->
+    </div> <!-- container -->
+</div>
+        <div id="home" class="header-content-area d-flex align-items-center list" style="height:450px;">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="header-wrapper">
+                            <div class="header-content">
+                                <h1 class="header-title">调用feign接口时，如何往header中添加参数</h1>
+                                <p class="text nav">
+                                    <a href="/">首页</a> / <a href="/news/">新闻资讯</a> / <span>正文</span>
+                                </p>
+                            </div> <!-- header content -->
+                            <div class="header-image d-none d-lg-block">
+                                <div class="image">
+                                    <img src="/assets/website/img/cn-freevpn/header.png" alt="Header">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div> <!-- row -->
+            </div> <!-- container -->
+            <div class="header-shape">
+                <img src="/assets/website/img/cn-freevpn/header-shape.svg" alt="shape">
+            </div> <!-- header-shape -->
+        </div> <!-- header content area -->
+    </header>
+    <!--====== HEADER ONE PART ENDS ======-->
+    <!--====== ABOUT THREE PART START ======-->
+    <section id="about" class="about-area pt-70 pb-100">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-9">
+                                    <input type="hidden" id="share-website-info" data-name="" data-url="">
+                  				  				  				<div id="content_views" class="markdown_views prism-github-gist"> <blockquote> <p>Controller接收到请求后，我们可以在service中通过feign直接调用其它服务的接口，但是，controller接收到的请求和通过feign调用其它服务，其它服务接收到的请求，是不一样的。例如我们往往习惯于在header中放入用户的token信息，在不做处理的情况下，其它服务接收到的请求，可能就是无用户信息状态，这种请求应该判定为无效状态。</p> </blockquote> <p>在服务的提供方或者调用方定义一个拦截器，将当前请求的token信息手动添加到feign请求的header中。</p> <pre><code class="prism language-java"><span class="token annotation punctuation">@Configuration</span><span class="token keyword">public</span><span class="token keyword">class</span><span class="token class-name">FeignRequestInterceptorConfig</span><span class="token keyword">implements</span><span class="token class-name">RequestInterceptor</span><span class="token punctuation">{<!-- --></span><span class="token annotation punctuation">@Bean</span><span class="token keyword">public</span><span class="token class-name">RequestContextListener</span><span class="token function">requestContextListener</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{<!-- --></span><span class="token keyword">return</span><span class="token keyword">new</span><span class="token class-name">RequestContextListener</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token punctuation">}</span><span class="token annotation punctuation">@Override</span><span class="token keyword">public</span><span class="token keyword">void</span><span class="token function">apply</span><span class="token punctuation">(</span><span class="token class-name">RequestTemplate</span> requestTemplate<span class="token punctuation">)</span><span class="token punctuation">{<!-- --></span><span class="token class-name">ServletRequestAttributes</span> attributes<span class="token operator">=</span><span class="token punctuation">(</span><span class="token class-name">ServletRequestAttributes</span><span class="token punctuation">)</span><span class="token class-name">RequestContextHolder</span><span class="token punctuation">.</span><span class="token function">getRequestAttributes</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token keyword">if</span><span class="token punctuation">(</span><span class="token class-name">ObjectUtils</span><span class="token punctuation">.</span><span class="token function">isEmpty</span><span class="token punctuation">(</span>attributes<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">{<!-- --></span><span class="token keyword">return</span><span class="token punctuation">;</span><span class="token punctuation">}</span><span class="token class-name">HttpServletRequest</span> request<span class="token operator">=</span> attributes<span class="token punctuation">.</span><span class="token function">getRequest</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token class-name">String</span> token<span class="token operator">=</span> request<span class="token punctuation">.</span><span class="token function">getHeader</span><span class="token punctuation">(</span><span class="token string">"token"</span><span class="token punctuation">)</span><span class="token punctuation">;</span> 		requestTemplate<span class="token punctuation">.</span><span class="token function">header</span><span class="token punctuation">(</span><span class="token string">"token"</span><span class="token punctuation">,</span> token<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token punctuation">}</span><span class="token punctuation">}</span></code></pre> <p>在使用过程中，可能会涉及到在请求方获取自己的token信息都是为空的，查看一下是否是Hystrix策略导致的，如下配置可以解决该问题。</p> <pre><code class="prism language-java">hystrix<span class="token operator">:</span>   command<span class="token operator">:</span><span class="token keyword">default</span><span class="token operator">:</span>       execution<span class="token operator">:</span>         timeout<span class="token operator">:</span>           #如果enabled设置为<span class="token boolean">false</span>，则请求超时交给ribbon控制           enabled<span class="token operator">:</span><span class="token boolean">true</span>         isolation<span class="token operator">:</span>           # 隔离策略           strategy<span class="token operator">:</span> SEMAPHORE           thread<span class="token operator">:</span>             timeoutInMilliseconds<span class="token operator">:</span><span class="token number">100000</span></code></pre> </div> 			                <div class="clearfix"></div>
+                <div class="col-md-12 mt-5">
+                                        <p>上一个：<a href="/news/article-26345.htm">宠物粮食产地在哪里（宠物粮生产基地）</a></p>
+                                        <p>下一个：<a href="/news/article-26814.htm">南京宠物医院领养（南京领养宠物都要做什么条件）</a></p>
+                                    </div>
+                                </div>
+                <div class="col-md-3">
+                    <div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">热门文章</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2"><a href="/news/article-58518.htm" title="南京宠物狗领养中心地址在哪里 南京宠物狗领养中心地址在哪里啊">南京宠物狗领养中心地址在哪里 南京宠物狗领养中心地址在哪里啊</a></li>
+                        <li class="py-2"><a href="/news/article-53857.htm" title="如何在Web前端实现CAD图文字全文搜索功能之技术分享">如何在Web前端实现CAD图文字全文搜索功能之技术分享</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-1-5-linux-surfboard-node.htm" title="「1月5日」最高速度18M/S，V2ray/SSR/Clash/Shadowrocket/CN-FreeVPN免费节点订阅链接">「1月5日」最高速度18M/S，V2ray/SSR/Clash/Shadowrocket/CN-FreeVPN免费节点订阅链接</a></li>
+                        <li class="py-2"><a href="/news/article-35988.htm" title="C语言数据结构、十字链表的分析及实现">C语言数据结构、十字链表的分析及实现</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-2-1-node-share.htm" title="「2月1日」最高速度21.6M/S，Clash/V2ray/SSR/Shadowrocket/CN-FreeVPN免费节点订阅链接">「2月1日」最高速度21.6M/S，Clash/V2ray/SSR/Shadowrocket/CN-FreeVPN免费节点订阅链接</a></li>
+                        <li class="py-2"><a href="/news/article-63590.htm" title="长沙宠物狗领养网站（长沙宠物狗领养网站大全）">长沙宠物狗领养网站（长沙宠物狗领养网站大全）</a></li>
+                        <li class="py-2"><a href="/news/article-37697.htm" title="Java基础之浅谈异常与了解断言">Java基础之浅谈异常与了解断言</a></li>
+                        <li class="py-2"><a href="/news/article-41181.htm" title="动物医院常用仪器有哪些（动物医院常用仪器有哪些种类）">动物医院常用仪器有哪些（动物医院常用仪器有哪些种类）</a></li>
+                        <li class="py-2"><a href="/news/article-38200.htm" title="猫三联一共几针多少钱每年都要打吗-宠物汇（猫三联一共几针,多少钱）">猫三联一共几针多少钱每年都要打吗-宠物汇（猫三联一共几针,多少钱）</a></li>
+                        <li class="py-2"><a href="/news/article-64175.htm" title="动物疫苗检测（动物疫苗检测染菌可以报废）">动物疫苗检测（动物疫苗检测染菌可以报废）</a></li>
+                    </ul>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">归纳</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">6</span> <a href="/date/2025-03/" title="2025-03 归档">2025-03</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">83</span> <a href="/date/2025-02/" title="2025-02 归档">2025-02</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">92</span> <a href="/date/2025-01/" title="2025-01 归档">2025-01</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">87</span> <a href="/date/2024-12/" title="2024-12 归档">2024-12</a></h4>
+            </li>
+                    </ul>
+    </div>
+</div>
+
+                </div>
+            </div>
+        </div> <!-- container -->
+    </section>
+    <!--====== ABOUT THREE PART ENDS ======-->
+        <!--====== FOOTER PART START ======-->
+    <footer id="footer" class="footer-area">
+        <div class="footer-copyright">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="copyright text-center">
+                            <p>
+                                <a href="/">首页</a> | 
+                                <a href="/free-node/">免费节点</a> | 
+                                <a href="/news/">新闻资讯</a> |
+                                <a href="/about-us.htm">关于我们</a> |
+                                <a href="/disclaimer.htm">免责申明</a> |
+                                <a href="/privacy.htm">隐私申明</a> |
+                                <a href="/sitemap.xml">网站地图</a>
+                            </p>
+                            <p class="text">CN-FreeVPN节点订阅中文站 版权所有 Powered by WordPress</p>
+                        </div> <!-- copyright -->
+                    </div>
+                </div> <!-- row -->
+            </div> <!-- container -->
+        </div> <!-- footer copyright -->
+    </footer>
+    <!--====== FOOTER PART ENDS ======-->
+    <!--====== BACK TOP TOP PART START ======-->
+    <a href="#" class="back-to-top"><i class="lni-chevron-up"></i></a>
+    <!--====== BACK TOP TOP PART ENDS ======-->
+    <!--====== jquery js ======-->
+    <script src="/assets/website/js/frontend/cn-freevpn/vendor/modernizr-3.6.0.min.js"></script>
+    <script src="/assets/website/js/frontend/cn-freevpn/vendor/jquery-1.12.4.min.js"></script>
+    <!--====== Bootstrap js ======-->
+    <script src="/assets/website/js/frontend/cn-freevpn/bootstrap.min.js"></script>
+    <script src="/assets/website/js/frontend/cn-freevpn/popper.min.js"></script>
+    <!--====== Images Loaded js ======-->
+    <script src="/assets/website/js/frontend/cn-freevpn/imagesloaded.pkgd.min.js"></script>
+    <!--====== Scrolling Nav js ======-->
+    <script src="/assets/website/js/frontend/cn-freevpn/jquery.easing.min.js"></script>
+    <script src="/assets/website/js/frontend/cn-freevpn/scrolling-nav.js"></script>
+    <!--====== Slick js ======-->
+    <script src="/assets/website/js/frontend/cn-freevpn/slick.min.js"></script>
+    <!--====== Main js ======-->
+    <script src="/assets/website/js/frontend/cn-freevpn/main.js"></script>
+    <script src="https://www.freeclashnode.com/assets/js/frontend/invite-url.js"></script>
+    <script src="/assets/website/js/frontend/G.js"></script>
+</body>
+
+</html>
